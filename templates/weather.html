@@ -1,0 +1,159 @@
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to fetch and display weather data
+            function fetchWeather() {
+                $.ajax({
+                    type: "GET",
+                    url: "/get_weather",
+                    success: function (response) {
+                        $("#weather-data").html(response.weather_data);
+                    },
+                    error: function () {
+                        alert("An error occurred while fetching weather data.");
+                    }
+                });
+            }
+
+            // Initial fetch of weather data
+            fetchWeather();
+
+            // Periodically update weather data (e.g., every 5 minutes)
+            setInterval(fetchWeather, 60000); // 5 minutes in milliseconds
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Alert || Weather</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--===============================================================================================-->
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+		<!--===============================================================================================-->
+	</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+                <img src="{{ url_for('static', filename='cloudy.png') }}" alt="IMG">
+		</div>
+
+        <h1>Weather Information</h1>
+        <div id="weather-data">
+            <!-- Weather data will be displayed here -->
+        </div>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+
+    $(document).ready(function () {
+            // Function to fetch and display weather data
+            function fetchWeather() {
+                $.ajax({
+                    type: "GET",
+                    url: "/get_weather",
+                    success: function (response) {
+                        $("#weather-data").html(response.weather_data);
+                    },
+                    error: function () {
+                        alert("An error occurred while fetching weather data.");
+                    }
+                });
+            }
+
+            // Initial fetch of weather data
+            fetchWeather();
+
+            // Periodically update weather data (e.g., every 5 minutes)
+            setInterval(fetchWeather, 60000); // 5 minutes in milliseconds
+        });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
