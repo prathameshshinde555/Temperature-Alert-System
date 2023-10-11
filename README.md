@@ -109,6 +109,15 @@ To obtain API keys (API key and secret key) from Mailjet, follow these stepwise 
 
 Remember to follow Mailjet's terms of service and usage limits while using their services. Additionally, consider implementing security best practices to protect your API keys from unauthorized access or exposure.
 
+# Running the Flask Application
+
+1. Open a terminal and navigate to the project directory.
+2. Make sure your virtual environment is activated (if you created one).
+3. Run the Flask application:
+
+```bash
+flask run
+```
 ## Working of Functions
 
 ### `get_weather` Function:
