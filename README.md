@@ -3,6 +3,13 @@
 # Temperature Alert System
 
 The Temperature Alert System is a Python application that checks the current temperature at a specified location and sends an email alert if the temperature falls below or exceeds a certain threshold.
+# Demo 
+
+Home Page
+![Demo](https://github.com/prathameshshinde555/Temperature-Alert-System/blob/main/images/Demo1.png?raw=true)
+
+Weather Information
+![Demo](https://github.com/prathameshshinde555/Temperature-Alert-System/blob/main/images/Demo2.png?raw=true)
 
 ## Features
 
@@ -154,13 +161,7 @@ Remember to follow Mailjet's terms of service and usage limits while using their
 - It returns a JSON response with the temperature status in both GET and POST requests.
 
 Overall, this code creates a Flask web application that allows users to input their name, email, location, and temperature thresholds. It creates an agent that periodically checks the weather for the specified location, compares it to the thresholds, and sends email alerts if necessary. The app stops sending emails after the first alert.
-# Demo 
 
-Home Page
-![Demo](https://github.com/prathameshshinde555/Temperature-Alert-System/blob/main/images/Demo1.png?raw=true)
-
-Weather Information
-![Demo](https://github.com/prathameshshinde555/Temperature-Alert-System/blob/main/images/Demo2.png?raw=true)
 
 
 ## License
