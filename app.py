@@ -9,6 +9,7 @@ from decouple import config
 WEATHER_API = config('WEATHER_API')
 API_KEY = config('API_KEY')
 SECRET_KEY = config('SECRET_KEY')
+MAILJET_EMAIL = config('MAILJET_EMAIL')
 
 count = 0
 # Initialize Flask app
@@ -168,7 +169,7 @@ def send_email(email, message):
         'Messages': [
             {
                 'From': {
-                    'Email': 'yashyogeshkathane@gmail.com',
+                    'Email': MAILJET_EMAIL ,
                     'Name': 'Weather Temperature Alert System'
                 },
                 'To': [
